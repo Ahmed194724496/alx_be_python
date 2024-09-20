@@ -15,4 +15,4 @@ match operations:
         else:
             print("Error: Division by zero is not allowed")
     case _:
-        print("Invalid operation!")
+        print("Invalid operation. Please choose one of +, -, *, /.")
