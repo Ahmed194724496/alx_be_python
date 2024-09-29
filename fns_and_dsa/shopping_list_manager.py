@@ -1,7 +1,3 @@
-# shopping_list=[]
-# shopping_list.append()
-# shopping_list.append()
-# shopping_list[:]
 shopping_list = []
 def display_menu():
     print("Shopping List Manager")
@@ -17,24 +13,24 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-           item = input("add item name: ") 
-           if item:
-               shopping_list.append(item)
-               print("item added")
-           else:
-               print("item cannot be added")
-           pass
-        elif choice == '2':
-            item = input("remove item name: ")
+            item =  input("Enter the item to add: ")
             if item:
-               shopping_list.removed(item)
-               print("item removed") 
-            else :
-               print("item cannot be removed")         
-            pass
+                shopping_list.append(item)
+                print(f"'{item}' has been added to the shopping list.")
+            else:
+                print("empty item name")
+        
+        elif choice == '2':
+            item =  input("Enter the item to be removed: ")
+            if item in shopping_list:
+                shopping_list.remove(item)
+                print(f"'{item}' has been removed from the shopping list.")
+            else:
+                print(f"'{item}' not found")
+        
         elif choice == '3':
-         if  shopping_list:
-            print(f"\nCurrent Shopping List:{ shopping_list}")
+            if  shopping_list:
+                print(f"\nCurrent Shopping List:{ shopping_list}")
             pass
         elif choice == '4':
             print("Goodbye!")
